@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+; Restaurar Nagle's Algorithm a su configuración predeterminada
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{39431c25-36f7-4a3e-adcb-278265facce}]
+"TcpAckFrequency"=-
+"TCPNoDelay"=-
+
+; Restaurar la prioridad del sistema a su configuración predeterminada
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"NetworkThrottlingIndex"=dword:0000000a
+"SystemResponsiveness"=dword:00000014
+
+; Restaurar el rendimiento de la GPU a su configuración predeterminada
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Scheduler]
+"EnableFrameBufferLowLatency"=-
